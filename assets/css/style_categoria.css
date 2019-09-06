@@ -1,0 +1,25 @@
+.item3 {
+	margin-bottom: 1rem;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.5rem;
+}
+
+.item3 a {
+	color: #025373;
+	align-items: center;
+	display: inline-flex;
+}
+
+.item3 img {
+  margin-right: 1rem;
+}
+
+.ul {
+
+}
+
+@media (max-width: 360px){
+  .container1 {
+    display: none !important;
+  }
+}

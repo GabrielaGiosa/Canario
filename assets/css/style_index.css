@@ -1,0 +1,39 @@
+.item2 {
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: #025373;
+}
+
+.item3 {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+}
+
+.aluno {
+  margin-left: 1rem;
+  color: #025373;
+}
+
+.ul {
+  display: flex;
+  max-width: 100rem;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.item4 {
+  margin: 1rem;
+}
+
+@media (max-width: 360px){
+  .container1 {
+    display: none !important;
+  }
+}

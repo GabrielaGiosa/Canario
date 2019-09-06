@@ -1,0 +1,45 @@
+.item2 {
+	justify-content: flex-start;
+	margin-bottom: 1rem;
+	font-family: 'EB Garamond', serif;
+	font-size: 2.5rem;
+	text-align: justify;
+	color: #025373;
+}
+
+.item3 {
+	justify-content: flex-start;
+	margin-bottom: 1rem;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.2rem;
+	text-align: justify;
+	color: #025373;
+}
+
+.item4 {
+	margin: 1rem;
+	align-items: flex-end;
+}
+
+.lista {
+	border-style: solid;
+	margin: 1rem;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.2rem;
+	color: #025373;
+}
+
+.ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+@media (max-width: 360px){
+	.body {
+		flex-wrap: wrap !important;
+	}
+	.container1 {
+   display: none !important;
+ }
+}
