@@ -21,7 +21,7 @@
   border-style: solid;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-top: 1rem;
+  margin-top: 1rem;  
 }
 
 .container3 {
@@ -51,15 +51,23 @@
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
-  width: 100%;
   flex-direction: column;
   font-family: 'EB Garamond', serif;
   font-size: 1.5rem;
   text-align: center;
 }
 
+.botao {
+  display: none;
+}
+
 .item1 a {
   color: #F0F7FA;
+}
+
+.item1 a:hover {
+  color: #025373;
+  transition: all 0.2s;
 }
 
 .titulo {
@@ -72,3 +80,59 @@
 }
 
 
+@media (max-width: 360px){
+  .container4 {
+    justify-content: center;
+  }
+  .container1 {
+    position: absolute;
+    top: 0;
+    left: -15rem;
+    height: 35rem;
+    width: 10rem;
+    display: block;
+    transition: all 0.5s;
+  }
+  .botao {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #fff; 
+    background-image: url('../img/3_tracos.png');
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    top: 1.35rem;
+    border-width: 0;
+  }
+  .botao:hover + .container1{
+    left: 0;
+    transition: all 0.5s;
+  }
+  .container1:hover {
+    left: 0;
+    transition: all 0.5s;
+  }
+  .item1 {
+      height: 30rem; 
+  }
+  .container2 h1{
+    margin-left: 3rem;
+  }
+  .container3 h1 {
+    margin-left: 3rem;
+  }
+  .titulo {
+    margin-right: 1rem;
+  }
+  .container3 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    /*margin-left: 2rem;
+    margin-right: 2rem;*/
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}

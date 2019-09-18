@@ -8,7 +8,11 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/projeto.js"></script>
   <meta charset="utf-8"/>
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/index.js"></script>
 </head>
 <body class="body">
 
@@ -21,42 +25,47 @@
       <li><a style="text-decoration:none" href="categoria.html">FabLab</a></li>
       <li><a style="text-decoration:none" href="categoria.html">Matemática e Física</a></li>
       <li><a style="text-decoration:none" href="categoria.html">Programação</a></li>
-      <li><a style="text-decoration:none" href="categoria.html">Galeria</a></li>
     </ul>
   </div>
 
   <div class="container3">
-
-    <h1 class="titulo">Estação Meteorológica</h1>
+    
+    <h1 class="titulo">{{this.titulo}}</h1>
     <h2 class="item2">Descrição:</h2>
-    <p class="item3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl orci, elementum nec turpis quis, finibus luctus nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque eu nulla eleifend, condimentum nulla sit amet, pharetra neque. Aliquam erat volutpat. Suspendisse vel ipsum vitae nibh bibendum vehicula vel ac urna. Curabitur dui risus, scelerisque non libero sit amet, aliquet fringilla lorem. Phasellus ornare vulputate lectus quis venenatis. Sed aliquam diam in quam tincidunt, sed dapibus mi efficitur. Maecenas tincidunt est eu mauris fermentum pellentesque. Proin vitae nisi scelerisque, sollicitudin ante et, cursus lectus. Fusce sem nisi, auctor a massa ut, blandit condimentum lectus. Duis arcu nunc, egestas vel pulvinar non, porta tincidunt mauris. Aliquam ac odio ultrices, feugiat purus gravida, efficitur justo. Mauris sed metus eu ante feugiat consectetur. </p>
+     <p class="item3"> {{this.descricao}}</p>
     <h2 class="item2">Equipe:</h2>
     <ul class="lista">
-      <li>Isadora Dalberto</li>
-      <li>Gabriela Giosa</li> 
-      <li>João Gilberto</li> 
-      <li>João Pedro Ribeiro</li>
-      <li>João Roxo</li>
+      {{#each equipe}}
+      <li>{{this}}</li>
+      {{/each}}
     </ul>
     <h2 class="item2">Materiais:</h2>
-    <ul class="lista">
-      <li>Sensor de luminosidade</li>
-      <li>Sensor de pressão</li>
-      <li>Sensor de temperatura</li>
-      <li>MDF</li>
-      <li>Arduino</li>
-      <li>Bateria</li>
+    <ul class="lista_">
+      {{#each recursos}}
+      <li>{{this}}</li>
+      {{/each}}
     </ul>
+
   </div>	
 
   <div class="container4">
     <ul class="ul">
-      <li class="item4"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
-      <li class="item4"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
-      <li class="item4"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
-      <li class="item4"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
+      {{#each imagem}}
+      <li class="item4"><img id="myImg" src= "assets/img/{{this.imagem2}}.png" alt="{{@key}}"></li>
+      {{/each}}
     </ul>
   </div>  
 
+<!-- codigo do efeito da imagem que abre -- se quiser tirar tem que tirar o id="myImg" das imagens do item4!!!! 
+<-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+</script>
 </body>
 </html>

@@ -7,8 +7,12 @@
 	<link href="assets/css/style_sidebar.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/secao.js"></script>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/index.js"></script>
 </head>
 <body class="body">
 
@@ -17,24 +21,20 @@
 		<img src= "http://picsum.photos/150/100/?random" alt="Portfólio">
 		<ul class="item1">
       <li><a style="text-decoration:none" href="index.html">Home</a></li>
-      <li><a style="text-decoration:none" href="categoria.html">Auxílio</a></li>
-      <li><a style="text-decoration:none" href="categoria.html">FabLab</a></li>
-      <li><a style="text-decoration:none" href="categoria.html">Matemática e Física</a></li>
-      <li><a style="text-decoration:none" href="categoria.html">Programação</a></li>
-      <li><a style="text-decoration:none" href="categoria.html">Galeria</a></li>
+      <li><a style="text-decoration:none" href="categoria.html?key=auxilio">Auxílio</a></li>
+      <li><a style="text-decoration:none" href="categoria.html?key=fablab">FabLab</a></li>
+      <li><a style="text-decoration:none" href="categoria.html?key=matfis">Matemática e Física</a></li>
+      <li><a style="text-decoration:none" href="categoria.html?key=program">Programação</a></li>
     </ul>
   </div>
 
   <div class="container2">
-    <h1 class="titulo">Projetos de Programação</h1>
-    <ul class="ul">
-      <li class="item3"><a style="text-decoration:none" href="projeto.html"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio">Dados </a></li>
-      <li class="item3"><a style="text-decoration:none" href="projeto.html"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"> Estação Meteorológica </a> </li>
-      <li class="item3"><a style="text-decoration:none" href="projeto.html"><img src= "http://picsum.photos/200/100/?random" alt="Portfólio">Jogo </a> </li>
 
-      <li class="item3_2"><a style="text-decoration:none" href="projeto.html"> Dados </a><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
-      <li class="item3_2"><a style="text-decoration:none" href="projeto.html"> Estação Meteorológica</a><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
-      <li class="item3_2"><a style="text-decoration:none" href="projeto.html"> Jogo </a><img src= "http://picsum.photos/200/100/?random" alt="Portfólio"></li>
+    <h1 class="titulo">{{titulo}}</h1>
+    <ul class="ul">
+      {{#each projetos}}
+      <li class="item3"><a style="text-decoration:none" href="projeto.html?key={{../ab}}&chave={{@key}}"><img src= "assets/img/{{this.imagem}}" alt={{@key}}><this class="titulo">{{this.titulo}}</this> </a></li>
+      {{/each}}
     </ul>
 
   </div>

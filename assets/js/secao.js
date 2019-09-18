@@ -16,16 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
       vai se arrepender. Você foi avisado.
     */
 
-    context = data['portfolio'][value]
-    coDesReplace('title', context)
+    let dora = data['portfolio'][value]
+    dora['ab']= value
+    coDesReplace('.ul', dora)
 
-    context = data
-    coDesReplace('.item1', context)
+    let cat= data['portfolio'][value]
+    coDesReplace('.titulo', cat)
 
-    context = data['portfolio'][value]
-    coDesReplace('.item4', context)
-
-    context = data['portfolio'][value]
-    coDesReplace('.item3', context)
   })
 })

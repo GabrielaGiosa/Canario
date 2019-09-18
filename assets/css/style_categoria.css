@@ -12,14 +12,41 @@
 
 .item3 img {
   margin-right: 1rem;
+  width: 200px;
+  height: 100px;
 }
 
-.ul {
+.item3_2 {	
+	display: none;
+	margin-bottom: 1rem;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.5rem;
+}
 
+.item3_2 a {
+	color: #025373;
+	align-items: center;
+	display: inline-flex;
 }
 
 @media (max-width: 360px){
-  .container1 {
-    display: none !important;
+	.item3 {
+		display: flex;
+		flex-direction: column;
+		max-width: 299.96px;
+		flex-wrap: wrap;
+		border-style: solid;
+		border-width: 2px;
+	}
+	.item3_2 {
+		display: block;
+		max-width: 299.96px;
+		flex-wrap: wrap;
+	}
+	.item3_2 img{
+		display: block;
+	}
+	.titulo {
+    	font-size: 1rem !important;
   }
-}
+ }
